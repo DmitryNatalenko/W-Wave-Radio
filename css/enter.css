@@ -1,0 +1,202 @@
+body {
+  background-color: #797979;
+}
+
+.enter {
+  padding-top: 80px;
+}
+
+.enter__container {
+  display: flex;
+  justify-content: center;
+}
+
+.enter__content {
+  position: relative;
+  padding: 60px;
+  padding-bottom: 55px;
+  max-width: 824px;
+  width: 100%;
+  background: var(--color-black);
+}
+
+.enter__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  stroke: var(--color-gray-text);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.enter__close svg {
+  stroke: inherit;
+}
+
+.enter__close.focus-visible {
+  outline: none;
+  stroke: var(--color-primary-light);
+}
+
+@media (min-width: 992px) {
+  .enter__close:hover {
+    stroke: var(--color-primary);
+  }
+}
+
+.enter__close:active {
+  stroke: var(--color-primary-shade);
+}
+
+.enter__title {
+  margin-bottom: 17px;
+  color: var(--color-white);
+}
+
+.enter__text,
+.enter__desc {
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.enter__link {
+  position: relative;
+  padding-left: 5px;
+  color: var(--color-primary);
+}
+
+.enter__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.enter__link.focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  outline-offset: -1px;
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+@media (min-width: 992px) {
+  .enter__link:hover::after {
+    opacity: 1;
+  }
+}
+
+.enter__link:active {
+  color: var(--color-primary-shade);
+}
+
+.enter__link:active::after {
+  opacity: 1;
+}
+
+.enter__form {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(230, 232, 236, 0.4);
+  padding-bottom: 28px;
+}
+
+.enter-form__input {
+  border-radius: 40px;
+  width: 100%;
+  max-width: 526px;
+  height: 70px
+}
+
+.enter-social__link svg {
+  width: 40px;
+  height: 40px;
+}
+
+.enter-social__link:not(:last-child) {
+  margin: 0;
+  margin-right: 40px;
+}
+
+@media (max-width: 992px) {
+  .enter__container {
+    padding: 0 115px;
+  }
+
+  .enter__content {
+    padding: 60px 38px 55px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .enter__content {
+    padding: 40px 20px 35px;
+  }
+
+  .enter__text,
+  .enter__desc {
+    font-size: 16px;
+  }
+
+  .enter__close svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .enter {
+    padding-top: 55px;
+  }
+
+  .enter__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .enter__content .enter__title {
+    margin-bottom: 11px;
+  }
+
+  .enter__text,
+  .enter__desc {
+    margin-bottom: 21px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .enter__form {
+    margin-bottom: 15px;
+  }
+
+  .enter-form__input {
+    margin-bottom: 20px;
+    padding-left: 17px;
+    height: 40px;
+  }
+
+  .enter-form__btn {
+    padding: 12px 56px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .enter__desc {
+    margin-bottom: 14px;
+  }
+
+  .enter__social {
+    justify-content: space-between;
+  }
+
+  .enter-social__link.social-link svg {
+    width: 40px;
+    height: 40px;
+  }
+}
